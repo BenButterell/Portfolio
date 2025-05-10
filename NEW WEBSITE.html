@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benjamin Butterell Portfolio</title>
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <style>
+    body {
+      background-color: #1c1c1c;
+      color: #f8f8f8;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6, p, a, label {
+      color: #f8f8f8;
+    }
+    .btn-custom {
+      background-color: #ffc107;
+      color: #1c1c1c;
+      border: none;
+    }
+    .hero {
+      padding: 4rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 1px solid #333;
+      margin: 2rem auto;
+      max-width: 900px;
+    }
+    .hero img {
+      border-radius: 50%;
+      width: 150px;
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      border-left: 4px solid #ffc107;
+      padding-left: 1rem;
+      margin: 3rem 0 1rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .skill-box {
+      background: #2c2c2c;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #ffc107;
+    }
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      background: #ffc107;
+      border-radius: 50%;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 2rem 0;
+      margin-top: 4rem;
+    }
+    .gallery-square img {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      width: 100%;
+      border-radius: 6px;
+    }
+    .modal-body img {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+    }
+    .gallery-square img {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-square img:hover {
+      transform: scale(1.02);
+    }
+      .timeline-entry {
+      padding-left: 1rem;
+    }
+    .timeline-entry h5 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .timeline-entry p {
+      margin-bottom: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Benjamin Butterell</a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <img src="https://via.placeholder.com/150" alt="Profile Picture">
+  <h2 class="text-warning">I'M Benjamin Butterell</h2>
+  <p>Brand Strategist & Package Design Specialist</p>
+  <a class="btn btn-custom mt-3" href="#">Contact Me</a>
+</section>
+
+<section class="container">
+  <div class="section-title">
+    <h3>About</h3>
+  </div>
+  <p>I am known for my brand and range building ability. This is my area of expertise and what makes me unique. A normal day for me is building a brand and/or range consisting of around 200+ items. My skill set ranges from branding, copy writing, visual communications, and photography to ACCC compliance. I understand any category or sector and identify what the end users want. My work as a retail category solutions specialist involves developing multi-brand, large volume range solutions.</p>
+</section>
+
+<section class="container">
+  <div class="section-title">
+    <h3>Gallery</h3>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mb-4 gallery-square">
+      <a href="images/90d428_50847d6db8b945588b73d56d95cb77d0~mv2.jpg" data-toggle="modal">
+        <img src="images/90d428_50847d6db8b945588b73d56d95cb77d0~mv2.jpg" class="img-fluid" alt="Gallery image 1">
+      </a>
+    </div>
+    <div class="col-md-4 mb-4 gallery-square">
+      <a href="images/90d428_3f3f354f1c3b4b59a27e3be5966a27f8~mv2.jpg" data-toggle="modal">
+        <img src="images/90d428_3f3f354f1c3b4b59a27e3be5966a27f8~mv2.jpg" class="img-fluid" alt="Gallery image 2">
+      </a>
+    </div>
+    <div class="col-md-4 mb-4 gallery-square">
+      <a href="images/90d428_8ab23895650643e3a08f9b08fd3bd6d9~mv2.jpg" data-toggle="modal">
+        <img src="images/90d428_8ab23895650643e3a08f9b08fd3bd6d9~mv2.jpg" class="img-fluid" alt="Gallery image 3">
+      </a>
+    </div>
+    <div class="col-md-4 mb-4 gallery-square">
+      <a href="images/90d428_703e7347778544329175f3e2ffb14697~mv2.jpg" data-toggle="modal">
+        <img src="images/90d428_703e7347778544329175f3e2ffb14697~mv2.jpg" class="img-fluid" alt="Gallery image 4">
+      </a>
+    </div>
+    <div class="col-md-4 mb-4 gallery-square">
+      <a href="images/90d428_6bec9afd009d418fae831aa2cf325213~mv2.jpg" data-toggle="modal">
+        <img src="images/90d428_6bec9afd009d418fae831aa2cf325213~mv2.jpg" class="img-fluid" alt="Gallery image 5">
+      </a>
+    </div>
+    <div class="col-md-4 mb-4 gallery-square">
+      <a href="images/90d428_4917fe12db98467fbbdfc093f1b5682f~mv2.jpg" data-toggle="modal">
+        <img src="images/90d428_4917fe12db98467fbbdfc093f1b5682f~mv2.jpg" class="img-fluid" alt="Gallery image 6">
+      </a>
+    </div>
+    <div class="col-md-4 mb-4 gallery-square">
+      <a href="images/90d428_3d4e7f7d6f374cc39e35e65ca28ca213~mv2.png" data-toggle="modal">
+        <img src="images/90d428_3d4e7f7d6f374cc39e35e65ca28ca213~mv2.png" class="img-fluid" alt="Gallery image 7">
+      </a>
+    </div>
+    <div class="col-md-4 mb-4 gallery-square">
+      <a href="images/90d428_0c36fc951d3d4560be2a49ba75f45948~mv2.jpg" data-toggle="modal">
+        <img src="images/90d428_0c36fc951d3d4560be2a49ba75f45948~mv2.jpg" class="img-fluid" alt="Gallery image 8">
+      </a>
+    </div>
+    <div class="col-md-4 mb-4 gallery-square">
+      <a href="images/90d428_19997049c0734f25baf6beac88f2f8c4~mv2.jpg" data-toggle="modal">
+        <img src="images/90d428_19997049c0734f25baf6beac88f2f8c4~mv2.jpg" class="img-fluid" alt="Gallery image 9">
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="section-title">
+    <h3>Experience</h3>
+  </div>
+  <div class="timeline">
+    <div class="timeline-entry">
+      <h5>Senior Designer</h5>
+      <p><strong>Company Name</strong> – Location<br>2021 – Present</p>
+      <p>Lead packaging designer across multiple ranges. Managed visual strategy, dielines, photography coordination, and retailer submission compliance.</p>
+    </div>
+    <div class="timeline-entry">
+      <h5>Creative Director</h5>
+      <p><strong>Company Name</strong> – Location<br>2018 – 2021</p>
+      <p>Directed branding and packaging projects for national campaigns. Responsible for storytelling, tone of voice, and cohesive range strategy across categories.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="section-title">
+    <h3>Skills</h3>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-box">Brand Strategy</div>
+    <div class="skill-box">Packaging Design</div>
+    <div class="skill-box">Visual Communication</div>
+    <div class="skill-box">Retail Category Planning</div>
+    <div class="skill-box">Photography Direction</div>
+    <div class="skill-box">Copywriting</div>
+    <div class="skill-box">ACCC Compliance</div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="section-title">
+    <h3>Testimonials</h3>
+  </div>
+  <blockquote class="blockquote text-light">
+    <p class="mb-0">"Benjamin’s work transformed our product lineup into a recognisable and compelling retail presence. His packaging instincts are unmatched."</p>
+    <footer class="blockquote-footer text-light">Client Name, <cite title="Source Title">Business Name</cite></footer>
+  </blockquote>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labelledby="imgModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-body text-center">
+        <img src="" id="modalImage" class="img-fluid" alt="Enlarged image">
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="text-center">
+  <div class="container">
+    <p>&copy; 2025 Benjamin Butterell. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  $(document).ready(function() {
+    $('a[data-toggle="modal"]').on('click', function(e) {
+      e.preventDefault();
+      var imgSrc = $(this).attr('href');
+      $('#modalImage').attr('src', imgSrc);
+      $('#imgModal').modal('show');
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+</body>
+</html>
